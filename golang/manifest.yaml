@@ -1,0 +1,7 @@
+description: RAPS manifest for testing purposes
+# Ordered list of directory names containing testcases
+testcases:
+- 001_testcase_name
+- 002_testcase_name
+- 003_testcase_name
+- nnn_testcase_name

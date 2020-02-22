@@ -1,0 +1,5 @@
+description: Description of test-case 001
+# ComponentIDs of Report Generators to be executed at the end of this testcase
+generators:
+- GEN_ONU_ACTIVATION_TIMES
+- GEN_ONOS_FUNCTIONAL_TEST

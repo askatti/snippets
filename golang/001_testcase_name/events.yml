@@ -1,0 +1,45 @@
+---
+- uid: '1'
+  time: '2'
+  source: EVENT_MANAGER
+  destination: CORE_MANAGER
+  preconditions:
+    tag:
+    - key: OLT_STARTED
+      value: 'OLT-123'
+  tags:
+    tag:
+    - key: ONU_ACTIVATE
+      value: 'pon_port_id_1_2'
+  data: 'Activate Onu request fired' 
+  timestamp:
+  fail:
+    timeout_ms: 300
+  action:
+    rest:
+      endpoint: v1/olts/OLT-123/activateonus
+      https: false
+      verb: POST
+      data: {"onu_info": { "info" :[{"pon_port_id": 1 },{ "pon_port_id": 2 } ] }}
+- uid: '2'
+  time: '3'
+  source: EVENT_MANAGER
+  destination: CORE_MANAGER
+  preconditions:
+    tag:
+    - key: OLT_STARTED
+      value: 'OLT-123'
+  tags:
+    tag:
+    - key: ONU_ACTIVATE
+      value: 'pon_port_id_1_2'
+  data: 'Activate Onu request fired' 
+  timestamp:
+  fail:
+    timeout_ms: 300
+  action:
+    rest:
+      endpoint: v1/olts/OLT-123/activateonus
+      https: false
+      verb: POST
+      data: {"onu_info": { "info" :[{"pon_port_id": 1 },{ "pon_port_id": 2 } ] }}
